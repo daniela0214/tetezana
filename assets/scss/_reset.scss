@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
+body {
+    font: 500 15px/25px "Plus Jakarta Sans", sans-serif;
+    background: #fff;
+    color: #fff
+}
+
+b,
+strong {
+    font-weight: 700
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all ease-in-out 400ms;
+    transition: all ease-in-out 400ms
+}
+
+main {
+    padding-bottom: 30px
+}
+
+main ul li {
+    position: relative;
+    padding-left: 35px;
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    font-weight: 600;
+    background: url(assets/img/puce-2.svg) no-repeat top left
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all ease-in-out 400ms;
+    transition: all ease-in-out 400ms;
+    color: #014db9
+}
+
+ul {
+    list-style: none
+}
+
+p:not(:last-of-type) {
+    margin-bottom: 30px
+}
+
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+    min-width: 320px
+}
+
+::-webkit-scrollbar {
+    width: 6px
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f1f5
+}
+
+::-webkit-scrollbar-thumb {
+    background: #191a33
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 40px
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+}
+h1,.titre-main{
+    font: 900 60px/70px "Plus jakarta sans";
+}
