@@ -143,9 +143,10 @@
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
     .item{
+        margin: 0 20px;
         img{
             width: 100%;
             object-fit: cover;
@@ -155,5 +156,62 @@
         font-size: 20px;
         color: #fff;
         font-weight: 800;
+    }
+}
+.bg-image-2{
+    position: relative;
+    background: url(./assets/img/services.jpg) no-repeat center;
+    background-size: cover;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #419C97;
+        top: 0;
+        left: 0;
+        opacity: 0.9;
+        z-index: 1;
+    }
+}
+.services{
+    position: relative;
+    padding: 100px 0;
+    z-index: 2;
+    &-grid{
+        margin: 50px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    .item{
+        .icone{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px 30px;
+            margin-bottom: 10px;
+        }
+        .content{
+            background: #272727;
+            padding: 30px ;
+        }
+        &:nth-child(2){
+            .content{
+                background-color: #419C97;
+            }
+        }
+    }
+}
+.partenaires{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 0 100px;
+    &-slick{
+        margin: 50px auto ;
+        max-width: 800px;
     }
 }
