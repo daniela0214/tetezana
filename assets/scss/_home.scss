@@ -1,11 +1,27 @@
-.banner{
+.banner {
     position: relative;
-    background: url(./assets/img/banner.png) no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    padding-top: 100px;
 
-    &::after{
+    .slick-slider {
+        position: absolute;
+    }
+
+    &-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -16,91 +32,110 @@
         opacity: 0.2;
         z-index: 1;
     }
-    .wrapper{
+
+    .wrapper {
+        position: inherit;
         display: grid;
         align-items: center;
         height: 100%;
     }
-    &-texte{
+
+    &-texte {
         position: relative;
         z-index: 2;
         margin: 150px 0 50px;
         width: 700px;
-
+        padding: 100px 0;
     }
-    .chapo{
+
+    .chapo {
         margin-top: 30px;
     }
 }
-.btn-group{
+
+.btn-group {
     margin-top: 35px;
     width: 450px;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
-.btn-white{
+
+.btn-white {
     background: #fff;
     color: #000;
 }
-.btn-border{
+
+.btn-border {
     border: 2px solid #fff;
 }
-.reseaux{
+
+.reseaux {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-top: 50px;
 }
-.reseaux  a{
+
+.reseaux a {
     width: 40px;
     height: 40px;
     display: grid;
     align-items: center;
     justify-content: center;
-    img{
+
+    img {
         transform: scale(0.7);
     }
 }
-.bg-blue{
+
+.bg-blue {
     position: relative;
     background: #419C97;
 }
-.vision{
+
+.vision {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 80px 0 120px;
-    .texte{
+
+    .texte {
         margin-top: 30px;
-        padding-right:280px ;
-        .titre-main{
+        padding-right: 280px;
+
+        .titre-main {
             margin-bottom: 10px;
         }
     }
-    .picto{
+
+    .picto {
         display: flex;
         margin-top: 30px;
         font-size: 30px;
         align-items: end;
         gap: 15px;
-        strong{
+
+        strong {
             display: block;
             margin-top: 10px;
         }
     }
 }
-.bloc-2{
+
+.bloc-2 {
     position: relative;
-    img{
+
+    img {
         position: absolute;
         top: 100px;
         display: block;
-        left:-50px;
+        left: -50px;
         z-index: 2;
     }
-    .box{
-        position:absolute ;
+
+    .box {
+        position: absolute;
         top: -30px;
         width: 315px;
         height: 315px;
@@ -110,11 +145,13 @@
         z-index: 1;
     }
 }
-.bg-image-1{
+
+.bg-image-1 {
     position: relative;
-    background: url(./assets/img/about.jpg) no-repeat center ;
+    background: url(./assets/img/about.jpg) no-repeat center;
     background-size: cover;
-    &::after{
+
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -126,43 +163,51 @@
         z-index: 1;
     }
 }
-.about{
+
+.about {
     position: relative;
     padding: 100px 0;
     z-index: 2;
     display: grid;
     grid-template-columns: auto auto;
     gap: 50px;
-    .profil-detail{
-        .titre-main{
+
+    .profil-detail {
+        .titre-main {
             margin-bottom: 30px;
         }
     }
 }
-.team{
+
+.team {
     position: relative;
     z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
-    .item{
+
+    .item {
         margin: 0 20px;
-        img{
+
+        img {
             width: 100%;
             object-fit: cover;
         }
     }
-    .nom{
+
+    .nom {
         font-size: 20px;
         color: #fff;
         font-weight: 800;
     }
 }
-.bg-image-2{
+
+.bg-image-2 {
     position: relative;
     background: url(./assets/img/services.jpg) no-repeat center;
     background-size: cover;
-    &::after{
+
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -174,18 +219,21 @@
         z-index: 1;
     }
 }
-.services{
+
+.services {
     position: relative;
-    padding: 100px 0;
+    padding: 100px 0 0;
     z-index: 2;
-    &-grid{
+
+    &-grid {
         margin: 50px 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
     }
-    .item{
-        .icone{
+
+    .item {
+        .icone {
             display: grid;
             align-items: center;
             justify-content: center;
@@ -194,24 +242,70 @@
             padding: 20px 30px;
             margin-bottom: 10px;
         }
-        .content{
+
+        .content {
             background: #272727;
-            padding: 30px ;
+            padding: 30px 10px 30px 30px;
+
+            p {
+                max-height: 210px;
+                overflow: auto;
+                padding-right: 20px;
+            }
+            ::-webkit-scrollbar {
+                width: 3px
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: #ffffff3b;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: #191a334b
+            }
         }
-        &:nth-child(2){
-            .content{
+
+        &:nth-child(2) {
+            .content {
                 background-color: #419C97;
             }
         }
     }
 }
-.partenaires{
+
+.partenaires {
     position: relative;
     z-index: 2;
     text-align: center;
     padding: 0 0 100px;
-    &-slick{
-        margin: 50px auto ;
+
+    &-slick {
+        margin: 50px auto 0;
         max-width: 800px;
     }
+}
+
+.bg-image-3 {
+    position: relative;
+    background: #000;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        background: url(./assets/img/contact.jpg) no-repeat center;
+        top: 0;
+        left: 0;
+        opacity: 0.15;
+        z-index: 1;
+    }
+}
+
+.contact {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0;
+    max-width: 800px;
 }

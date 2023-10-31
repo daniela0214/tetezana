@@ -51,6 +51,11 @@
             </div>
           </div>
         </div>
+        <div class="banner-image">
+            <img src="./assets/img/banner.png" alt="">
+            <img src="./assets/img/stade-barea.jpg" alt="">
+            <img src="./assets/img/banner.png" alt="">
+        </div>
       </div>
       <div class="bg-blue">
         <div class="wrapper">
@@ -198,13 +203,13 @@
             </div>
             <div class="services-grid">
               <div class="item">
-                  <div class="icone">
-                    <img src="./assets/img/talk.svg" alt="">
-                  </div>
-                  <div class="content">
-                    <p>Teaching different languages according to the preferred destination of the customers, specifically the athletes interested in studying abroad or pursuing professional opportunities overseas. This service will focus on working on the athlete's ability to communicate with peoplefrom outside. This service is unique in a way that it is personalized based on the need and preferences of the beneficiaries.
-                    </p>
-                  </div>
+                <div class="icone">
+                  <img src="./assets/img/talk.svg" alt="">
+                </div>
+                <div class="content">
+                  <p>This service consists of providing language courses to help individuals effectively communicate in an international setting, breaking down the barriers that can hinder international opportunities. The uniqueness of our service lies in the fact that the language learned is based on the individual's needs and preferred country of destination or work.
+                  </p>
+                </div>
               </div>
               <div class="item">
                 <div class="icone">
@@ -212,7 +217,7 @@
                 </div>
                 <div class="content">
                   <p>
-                    Becoming a platform that connects local athletes with international institutions, increasing their chances of exposure and being noticed by these institutions. To achieve this, TETEZANA will establish partnerships with universities, clubs, and federations through proposal submission. For high school students and interested young people seeking study opportunities (becoming student-athlete), we
+                    The aim of this service is to bridge the gap between Malagasy youths and local & international professional opportunities. This will be accomplished through Tetezana's partnerships with universities, companies, and organizations. The unique service connects every audience with opportunities that are best suited to their needs and status, as decided by Tetezana and themselves. These opportunities could include scholarships for student-athletes, volunteer/internship/work placements with sports-related organizations, or professional placements in clubs.
 
                   </p>
                 </div>
@@ -223,9 +228,9 @@
                 </div>
                 <div class="content">
                   <p>
-                    We will deliver career development sessions that focus on shaping the beneficiaries' mindset, building their confidence, and guiding them in their career path. Our mentoring will help them explore their future goals, whether they wish to continue as professionals or not. These sessions will feature motivational talks from experts in various fields, such as coaching, athletics, and business. By sharing their experiences, 
+                    Our service offering comprises delivering masterclasses, career development sessions, and connecting young people with mentors based on their specific interests and needs. Our service is exceptional because it offers participants the chance to receive guidance on breaking into the industry, learn from industry experts, and acquire skills that they will find useful in both their personal and professional lives.
                   </p>
-                  
+
                 </div>
               </div>
             </div>
@@ -248,19 +253,41 @@
           </div>
         </div>
       </div>
+      <div class="bg-image-3">
+        <div class="wrapper">
+          <div class="contact">
+            <div class="titre-main">
+              Let's Support them young athletes in Madagascar.
+            </div>
+            <div class="btn-group">
+              <a href="" class="btn btn-white">Get Involved</a>
+              <a href="" class="btn btn-border">Donate</a>
+            </div>
+            <div class="reseaux">
+              <a href=""><img src="/assets/img/twitter.svg" alt="" /></a>
+              <a href=""><img src="/assets/img/linkedin.svg" alt="" /></a>
+              <a href=""><img src="/assets/img/google.svg" alt="" /></a>
+              <a href=""><img src="/assets/img/instagram.svg" alt="" /></a>
+              <a href=""><img src="/assets/img/facebook.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
       <div class="wrapper">
-        <div class="logo-footer">
-          <img src="assets/img/logo-footer.svg" alt="" class="" />
-        </div>
         <div class="footer-bottom">
           <p>
-            © 2023 <span>Plombier Dethioux,</span> Tous droits réservés
-            <b>|</b>
-            <a href="">Mentions légales</a>
+            Copyright ©  2023 Andonirina ANDRIANATREHINA & Daniela ANDRIAMAHAZONIAINA - All Rights Reserved
           </p>
+          <div class="reseaux">
+            <a href=""><img src="/assets/img/twitter.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/linkedin.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/google.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/instagram.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/facebook.svg" alt="" /></a>
+          </div>
         </div>
       </div>
     </footer>
@@ -270,7 +297,17 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/slick.min.js"></script>
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
+      $(".banner-image").slick({
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed:2000,
+        speed: 1000,
+        infinite: true,
+        slidesToShow: 1,
+        fade: true,
+      });
       $(".team").slick({
         dots: false,
         arrows: false,
