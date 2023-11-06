@@ -128,9 +128,9 @@
 
     img {
         position: absolute;
-        top: 100px;
+        top: 150px;
         display: block;
-        left: -50px;
+        left: 50px;
         z-index: 2;
     }
 
@@ -155,7 +155,7 @@
         content: "";
         position: absolute;
         width: 100%;
-        height: calc(100% - 250px);
+        height:100%;
         background: #272727;
         top: 0;
         left: 0;
@@ -169,7 +169,7 @@
     padding: 100px 0;
     z-index: 2;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr ;
     gap: 80px;
     align-items: start;
    
@@ -184,6 +184,8 @@
         img{
             display: block;
             width: 100%;
+            height: 300px;
+            object-fit: cover;
         }
         margin-bottom: 30px;
     }
@@ -191,10 +193,9 @@
         margin-top: 30px;
     }
 }
-
 .team {
+    padding: 100px 0;
     position: relative;
-    margin-bottom: -250px;
     z-index: 4;
     max-width: 1500px;
     .item {
@@ -235,7 +236,7 @@
 
 .services {
     position: relative;
-    padding: 320px 0 0;
+    padding: 80px 0 50px;
     z-index: 2;
 
     &-grid {
@@ -255,15 +256,39 @@
             padding: 20px 30px;
             margin-bottom: 10px;
         }
-
+        
         .content {
+            position: relative;
             background: #272727;
-            padding: 30px 10px 30px 30px;
-
+            padding: 30px 10px 60px 30px;
+            height: 270px;
+            overflow: hidden;
+            transition: all ease-in-out 400ms;
         }
-
+        .content.show{
+            height: 75%;
+            max-height: fit-content;
+        }
+        button{
+            position: absolute;
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font: 700 15px/25px "poppins";
+            color: #fff;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            text-align: left;
+            padding: 20px 30px;
+            background: #272727;
+        }
         &:nth-child(2) {
             .content {
+                background-color: #419C97;
+            }
+            button{
                 background-color: #419C97;
             }
         }
@@ -274,11 +299,11 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 0 0 100px;
+    padding: 80px 0;
 
     &-slick {
         margin: 50px auto 0;
-        max-width: 800px;
+        max-width: 600px;
     }
 }
 

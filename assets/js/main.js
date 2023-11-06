@@ -1,30 +1,29 @@
-$(document).ready(function() {	
+$(document).ready(function () {
 	// menu fixe et logo tow //
-	function checkScroll()
-	{
+	function checkScroll() {
 		var posScroll = $(document).scrollTop();
 
-		if(posScroll>0) 
+		if (posScroll > 0)
 			$('body').addClass('sticky')
 		else
 			$('body').removeClass('sticky')
 
-		if(posScroll>160) 
+		if (posScroll > 160)
 			$('.go-top').addClass('show')
 		else
 			$('.go-top').removeClass('show')
 	}
-	$(window).scroll(function(){
+	$(window).scroll(function () {
 		checkScroll();
 	});
-	$(window).resize(function(){
+	$(window).resize(function () {
 		checkScroll();
 	});
 	checkScroll();
 	// Go to Top
-	$(function(){
+	$(function () {
 		// Scroll Event
-		$(window).on('scroll', function(){
+		$(window).on('scroll', function () {
 			var scrolled = $(window).scrollTop();
 			if (scrolled > 600) $('.go-top').addClass('active');
 			if (scrolled < 600) $('.go-top').removeClass('active');
@@ -37,14 +36,17 @@ $(document).ready(function() {
 		$('.navbar').slideToggle();
 		$("body").toggleClass("overflow_hidden");
 	});
-	$(".navbar-ul li i").click(function() {
+	$(".navbar-ul li i").click(function () {
 		$(this).toggleClass('active');
 		$(".navbar-ul").find('.sub').slideUp();
-		if($(this).hasClass("active")){
+		if ($(this).hasClass("active")) {
 			$(".navbar-ul li i").removeClass('active');
 			$(this).next().slideToggle();
 			$(this).toggleClass('active');
 		}
 	});
-}(jQuery));
+	$(".toggleButton").click(function(){
+		$(".services-grid .item .content").toggleClass('show');
+	})
 
+}(jQuery));
