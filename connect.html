@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.min.css" />
+  <title>Tetezana</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/logo.svg" alt="logo" /></a>
+      </div>
+      <nav class="navbar">
+        <ul class="navbar-ul">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="a-propos.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="" class="btn btn-header"> Get started </a>
+    </header>
+
+    <main>
+      <div class="banner">
+        <div class="wrapper">
+          <div class="banner-texte">
+            <h1>
+                Let's Support  them young 
+                athletes in Madagascar.            </h1>
+            <p class="chapo">
+                Thanks to people like you, the future of Africa is bright. With your support, we can build the African sport industry we dream of, and there’s no time like now to join the movement! Here’s how you can play a key role.
+            </p>
+          </div>
+        </div>
+        <div class="banner-image">
+            <img src="./assets/img/banner.png" alt="">
+            <img src="./assets/img/stade-barea.jpg" alt="">
+            <img src="./assets/img/banner-2.jpeg" alt="">
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-bottom">
+          <p>
+            Copyright ©  2023  ttezana - All Rights Reserved
+          </p>
+          <div class="reseaux">
+            <a href=""><img src="/assets/img/twitter.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/linkedin.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/google.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/instagram.svg" alt="" /></a>
+            <a href=""><img src="/assets/img/facebook.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".banner-image").slick({
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed:2000,
+        speed: 1000,
+        infinite: true,
+        slidesToShow: 1,
+        fade: true,
+      });
+      $(".team").slick({
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        speed: 500,
+        infinite: true,
+        slidesToShow: 4,
+        fade: false,
+      });
+      $(".partenaires-slick").slick({
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        speed: 500,
+        infinite: true,
+        slidesToShow: 4,
+        fade: false,
+      });
+    })
+  </script>
+</body>
+
+</html>
