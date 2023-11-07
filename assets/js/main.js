@@ -45,25 +45,25 @@ $(document).ready(function () {
 			$(this).toggleClass('active');
 		}
 	});
-	$(".item-1 .toggleButton").click(function(){
+	$(".item-1 .toggleButton").click(function () {
 		$(".services-grid .item-1 .content").toggleClass('show');
 	})
-	$(".item-2 .toggleButton").click(function(){
+	$(".item-2 .toggleButton").click(function () {
 		$(".services-grid .item-2 .content").toggleClass('show');
 	})
-	$(".item-3 .toggleButton").click(function(){
+	$(".item-3 .toggleButton").click(function () {
 		$(".services-grid .item-3 .content").toggleClass('show');
 	})
-	$("[class^='item'] .toggleButton").click(function(){
+	$("[class^='item'] .toggleButton").click(function () {
 		// Trouver le bouton cliqué
 		var button = $(this);
-	
+
 		// Trouver le texte actuel du bouton
 		var buttonText = button.text();
-	
+
 		// Basculer la classe 'show' sur le contenu
 		button.parent().find('.content p').toggleClass('show');
-	
+
 		// Mettre à jour le texte du bouton en fonction de l'état
 		if (buttonText === 'Read more') {
 			button.text('Read less');
@@ -71,5 +71,28 @@ $(document).ready(function () {
 			button.text('Read more');
 		}
 	});
+	function isElementInViewport(el) {
+        var rect = el[0].getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= $(window).height() &&
+            rect.right <= $(window).width()
+        );
+    }
+    $(".animate").each(function (i, el) {
+        var el = $(el);
+        if (isElementInViewport(el)) {
+            el.addClass("play");
+        }
+    });
+    $(window).scroll(function (event) {
+        $(".animate").each(function (i, el) {
+            var el = $(el);
+            if (isElementInViewport(el)) {
+                el.addClass("play");
+            }
+        });
+    });
 
 }(jQuery));

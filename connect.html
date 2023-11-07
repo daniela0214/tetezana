@@ -30,10 +30,10 @@
       <div class="banner">
         <div class="wrapper">
           <div class="banner-texte">
-            <h1>
+            <h1 class="animate fade_up delay-300">
               Let's Support them young
               athletes in Madagascar. </h1>
-            <p class="chapo">
+            <p class="chapo animate fade_up delay-300">
               Thanks to people like you, the future of Africa is bright. With your support, we can build the African
               sport industry we dream of, and there’s no time like now to join the movement! Here’s how you can play a
               key role.
@@ -46,9 +46,9 @@
       </div>
       <div class="wrapper">
         <div class="intro">
-          <img src="./assets/img/connect.svg" alt="">
+          <img src="./assets/img/connect.svg" alt="" class="animate fade_up delay-300">
           <div class="intro-grid">
-            <div class="texte">
+            <div class="texte animate fade_up delay-300">
               <p>
                 Becoming a platform that connec ts local athletes with international institutions, increasing their
                 chances
@@ -61,7 +61,7 @@
                 will connect them with clubs/federations.
               </p>
             </div>
-            <div class="texte">
+            <div class="texte animate fade_up delay-300">
               "Welcome to Tetezana's Opportunities Matchmaker! This form is designed to connect Malagasy youths with
               tailor-made local and international professional opportunities in sports. By answering a few questions,
               we'll help you discover the ideal path, whether it's securing scholarships for student-athletes, finding
@@ -74,17 +74,66 @@
       <div class="bg-blue">
         <div class="wrapper">
           <div class="formulaire">
-            <div class="titre-main">
+            <div class="titre-main animate fade_up delay-200">
               Tetezana's Opportunities <br>
               Matchmaker Form
             </div>
-            <form class="form">
-                <div class="info-perso">
-                  <input type="text" name="" id="" placeholder="Name">
-                  <input type="mail" name="" id="" placeholder="Email">
-                  <input type="phone" name="" id="" placeholder="Phone">
-                  <input type="text" name="" id="" placeholder="Age">
+            <form class="form  ">
+                <div class="info-perso animate fade_up delay-200">
+                  <div class="name">
+                    <label for="">Name</label>
+                    <input type="text" name="" id="" placeholder="Name">
+                  </div>
+                  <div class="email">
+                    <label for="">Email</label>
+                    <input type="mail" name="" id="" placeholder="Email">
+                  </div>
+                  <div class="phone">
+                    <label for="">Phone</label>
+                    <input type="phone" name="" id="" placeholder="Phone">
+                  </div>
+                  <div class="age">
+                    <label for="">Age</label>
+                    <input type="text" name="" id="" placeholder="Age">
+                  </div>
+                  <select>
+                    <option data-display="gender">Female</option>
+                    <option value="2">Male</option>
+                  </select>
                 </div>
+                <div class="info-student  animate fade_up delay-200">
+                    <div class="interest">
+                      <label for="">Please select your areas of interest:</label>
+                      <select>
+                        <option data-display="Scholarships for student-athletes">Volunteer opportunities</option>
+                        <option value="2">Internship opportunities</option>
+                        <option value="2">Work placements
+                        </option>
+                        <option value="2">Professional placements</option>
+                      </select>
+                    </div>
+                    <div class="interest ">
+                      <label for="">Tell us more about your educational background and skills:</label>
+                      <select>
+                        <option data-display="Currently in high school">Currently in university</option>
+                        <option value="2">Early Professional
+                        </option>
+                      </select>
+                    </div>
+                </div>
+                <div class="quetions animate fade_up delay-200">
+                    <div class="carrer">
+                      <label for="
+                      ">What are your career goals and aspirations?</label>
+                      <input type="text" placeholder="Your Answer">
+                    </div>
+                    <div class="carrer">
+                      <label for="
+                      ">What are your career goals and aspirations?</label>
+                      <input type="text" placeholder="Your Answer">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-white btn-submit animate fade_up delay-200">Submit</button>
             </form>
           </div>
         </div>
@@ -92,14 +141,14 @@
       <div class="bg-image-3">
         <div class="wrapper">
           <div class="contact">
-            <div class="titre-main">
+            <div class="titre-main animate fade_up delay-200">
               Let's Support them young athletes in Madagascar.
             </div>
             <div class="btn-group">
-              <a href="" class="btn btn-white">Get Involved</a>
-              <a href="" class="btn btn-border">Donate</a>
+              <a href="" class="btn btn-white animate fade_up delay-200">Get Involved</a>
+              <a href="" class="btn btn-border animate fade_up delay-200">Donate</a>
             </div>
-            <div class="reseaux">
+            <div class="reseaux animate fade_up delay-200">
               <a href=""><img src="/assets/img/twitter.svg" alt="" /></a>
               <a href=""><img src="/assets/img/linkedin.svg" alt="" /></a>
               <a href=""><img src="/assets/img/google.svg" alt="" /></a>
@@ -132,6 +181,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/nice-select.js"></script>
   <script>
     $(document).ready(function () {
       $(".banner-image").slick({
@@ -164,6 +214,8 @@
         slidesToShow: 4,
         fade: false,
       });
+	$('select').niceSelect();
+
     })
   </script>
 </body>
